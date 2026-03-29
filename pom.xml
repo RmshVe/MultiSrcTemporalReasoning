@@ -29,13 +29,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!-- Intentional S2 mismatch: override Jackson to an older incompatible version -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.13.0</version>
-        </dependency>
     </dependencies>
 
     <build>
