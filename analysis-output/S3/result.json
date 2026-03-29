@@ -1,0 +1,47 @@
+{
+  "scenario_id": "S3",
+  "scenario_name": "Previous commit regression",
+  "scenario_category": "temporal-git",
+  "status": "FAIL",
+  "predicted_root_cause": "Code regression in AccountService.delete(Long id): The deletion logic (repo.delete(id)) was removed in the latest commit, so accounts are no longer deleted.",
+  "expected_root_cause": "Previous commit regression identified through Git history",
+  "is_correct": true,
+  "confidence": "High",
+  "sources_used": [
+    "git_diff",
+    "git_commit_info",
+    "recent_commit_log",
+    "validation_summary",
+    "validation_errors",
+    "validation_responses"
+  ],
+  "source_count": 6,
+  "primary_sources_expected": [
+    "git_commit_info",
+    "git_diff",
+    "recent_commit_log",
+    "validation_summary",
+    "validation_responses"
+  ],
+  "primary_sources_covered": 5,
+  "analysis_time_ms": 16133,
+  "repo_url": "https://github.com/RmshVe/MultiSrcTemporalReasoning",
+  "actions_url": "https://github.com/RmshVe/MultiSrcTemporalReasoning/actions/runs/23719358085/job/69091662890",
+  "current_commit": "2dcc7eb779e6dc0c17478668ca302a9c32c0ff9b",
+  "previous_commit": "596e341f4f0032f0f9713b6670b1976f554499fc",
+  "latest_commit_message": "S3 scenario code change",
+  "timestamp_utc": "2026-03-29T21:47:56.273795Z",
+  "short_summary": "A recent code change removed actual deletion from AccountService.delete(), causing the 'delete account' endpoint to silently fail and regress behavior from the previous commit.",
+  "source_presence": {
+    "has_validation_summary": true,
+    "has_validation_errors": true,
+    "has_validation_responses": true,
+    "has_application_log": false,
+    "has_build_log": true,
+    "has_application_yaml": true,
+    "has_pom_xml": true,
+    "has_workflow_file": true,
+    "extra_log_count": 0,
+    "extra_file_count": 0
+  }
+}

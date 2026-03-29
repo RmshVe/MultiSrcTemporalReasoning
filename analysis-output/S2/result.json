@@ -1,0 +1,47 @@
+{
+  "scenario_id": "S2",
+  "scenario_name": "Dependency version mismatch in pom.xml",
+  "scenario_category": "dependency",
+  "status": "FAIL",
+  "predicted_root_cause": "Dependency version mismatch: Overriding 'jackson-databind' to an old incompatible version (2.13.0) in pom.xml causes runtime startup failure.",
+  "expected_root_cause": "Dependency version mismatch in pom.xml",
+  "is_correct": true,
+  "confidence": "High",
+  "sources_used": [
+    "pom_xml",
+    "pom_diff",
+    "build_log",
+    "application_log",
+    "workflow_file",
+    "git_commit_info"
+  ],
+  "source_count": 6,
+  "primary_sources_expected": [
+    "pom_xml",
+    "pom_diff",
+    "build_log",
+    "validation_summary",
+    "git_commit_info"
+  ],
+  "primary_sources_covered": 4,
+  "analysis_time_ms": 9641,
+  "repo_url": "https://github.com/RmshVe/MultiSrcTemporalReasoning",
+  "actions_url": "https://github.com/RmshVe/MultiSrcTemporalReasoning/actions/runs/23719358085/job/69091662890",
+  "current_commit": "2942c0ea38c1477fdf6fc09226d555763dc76505",
+  "previous_commit": "b69af6c58868f807f0dfc7da6cb8077ffbc45c11",
+  "latest_commit_message": "S2 scenario code change",
+  "timestamp_utc": "2026-03-29T21:35:04.757177Z",
+  "short_summary": "The application fails to start due to an explicit dependency on an old version of jackson-databind (2.13.0) in pom.xml, which is incompatible with Spring Boot 3.2.5; removal or update to a compatible version is required.",
+  "source_presence": {
+    "has_validation_summary": false,
+    "has_validation_errors": false,
+    "has_validation_responses": false,
+    "has_application_log": false,
+    "has_build_log": true,
+    "has_application_yaml": true,
+    "has_pom_xml": true,
+    "has_workflow_file": true,
+    "extra_log_count": 1,
+    "extra_file_count": 0
+  }
+}

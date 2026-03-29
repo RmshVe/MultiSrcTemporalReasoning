@@ -2,6 +2,7 @@ package com.example.multisrc.service;
 
 import com.example.multisrc.model.Account;
 import com.example.multisrc.repository.AccountRepository;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -10,6 +11,9 @@ import java.util.Optional;
 public class AccountService {
 
     private final AccountRepository repo;
+
+    @Value("${features.soft-delete:false}")
+    private boolean softDeleteEnabled;
 
     public AccountService(AccountRepository repo) {
         this.repo = repo;
@@ -30,8 +34,16 @@ public class AccountService {
     }
 
     public void delete(Long id) {
-        // Intentional S3 regression:
-        // recent refactor accidentally removed the actual delete call.
-        repo.findById(id).orElseThrow();
+        Account acc = repo.findById(id).orElseThrow();
+
+        if (softDeleteEnabled) {
+            // Intentional S5 behavior:
+            // feature flag changes delete semantics, but validation still expects hard delete.
+            acc.setActive(false);
+            repo.save(acc);
+            return;
+        }
+
+        repo.deleteById(id);
     }
 }

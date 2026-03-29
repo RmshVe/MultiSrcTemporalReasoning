@@ -1,0 +1,13 @@
+Started at: Sun Mar 29 16:46:25 CDT 2026
+
+[PASS] Application is reachable on port 8080 (HTTP 200)
+[PASS] Create account API works
+[PASS] Get account API works
+[PASS] Update account API works
+[PASS] Delete account API returned success
+[FAIL] Deleted account still retrievable after delete
+
+Pass count: 5
+Fail count: 1
+
+VALIDATION_STATUS=FAIL

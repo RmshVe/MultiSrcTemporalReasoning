@@ -1,0 +1,3 @@
+----- VERIFY_DELETE -----
+Expected deleted account to be absent, but got HTTP 200 and response: {"id":1,"name":"UpdatedName","active":true}
+

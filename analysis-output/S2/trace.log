@@ -1,0 +1,50 @@
+[2026-03-29T21:28:40.507654Z] Starting analysis for scenario S2
+[2026-03-29T21:28:40.508652Z] Repo dir: /Users/praneemishi/ramesh/paper-code/MultiSrcTemporalReasoning
+[2026-03-29T21:28:40.508765Z] Using built-in default scenario manifest
+[2026-03-29T21:28:40.510418Z] Running command: git rev-parse HEAD
+[2026-03-29T21:28:40.532917Z] Command succeeded: git rev-parse HEAD
+[2026-03-29T21:28:40.533310Z] Running command: git rev-parse HEAD~1
+[2026-03-29T21:28:40.547210Z] Command succeeded: git rev-parse HEAD~1
+[2026-03-29T21:28:40.547642Z] Running command: git log -1 --pretty=%B
+[2026-03-29T21:28:40.560690Z] Command succeeded: git log -1 --pretty=%B
+[2026-03-29T21:28:40.560920Z] Running command: git log -2 --oneline
+[2026-03-29T21:28:40.571137Z] Command succeeded: git log -2 --oneline
+[2026-03-29T21:28:40.571359Z] Running command: git diff HEAD~1 HEAD
+[2026-03-29T21:28:40.583609Z] Command succeeded: git diff HEAD~1 HEAD
+[2026-03-29T21:28:40.584142Z] Running command: git diff HEAD~1 HEAD -- src/main/resources/application.yml
+[2026-03-29T21:28:40.594221Z] Command succeeded: git diff HEAD~1 HEAD -- src/main/resources/application.yml
+[2026-03-29T21:28:40.594583Z] Running command: git diff HEAD~1 HEAD -- pom.xml
+[2026-03-29T21:28:40.605150Z] Command succeeded: git diff HEAD~1 HEAD -- pom.xml
+[2026-03-29T21:28:40.606053Z] Running command: git diff HEAD~1 HEAD -- .github/workflows/local-deploy.yml
+[2026-03-29T21:28:40.616128Z] Command succeeded: git diff HEAD~1 HEAD -- .github/workflows/local-deploy.yml
+[2026-03-29T21:28:40.616467Z] Context collection complete
+[2026-03-29T21:28:40.617201Z] Wrote context.json
+[2026-03-29T21:28:40.711604Z] Calling OpenAI model
+[2026-03-29T21:28:51.704944Z] Model response received in 10993 ms
+[2026-03-29T21:28:51.705339Z] Wrote report.md
+[2026-03-29T21:28:51.706053Z] Wrote result.json
+[2026-03-29T21:34:54.881403Z] Starting analysis for scenario S2
+[2026-03-29T21:34:54.882285Z] Repo dir: /Users/praneemishi/ramesh/paper-code/MultiSrcTemporalReasoning
+[2026-03-29T21:34:54.882396Z] Using built-in default scenario manifest
+[2026-03-29T21:34:54.885595Z] Running command: git rev-parse HEAD
+[2026-03-29T21:34:54.914303Z] Command succeeded: git rev-parse HEAD
+[2026-03-29T21:34:54.914667Z] Running command: git rev-parse HEAD~1
+[2026-03-29T21:34:54.929674Z] Command succeeded: git rev-parse HEAD~1
+[2026-03-29T21:34:54.929934Z] Running command: git log -1 --pretty=%B
+[2026-03-29T21:34:54.945053Z] Command succeeded: git log -1 --pretty=%B
+[2026-03-29T21:34:54.945460Z] Running command: git log -2 --oneline
+[2026-03-29T21:34:54.957804Z] Command succeeded: git log -2 --oneline
+[2026-03-29T21:34:54.958094Z] Running command: git diff HEAD~1 HEAD
+[2026-03-29T21:34:54.973135Z] Command succeeded: git diff HEAD~1 HEAD
+[2026-03-29T21:34:54.974759Z] Running command: git diff HEAD~1 HEAD -- src/main/resources/application.yml
+[2026-03-29T21:34:54.986060Z] Command succeeded: git diff HEAD~1 HEAD -- src/main/resources/application.yml
+[2026-03-29T21:34:54.986795Z] Running command: git diff HEAD~1 HEAD -- pom.xml
+[2026-03-29T21:34:54.998904Z] Command succeeded: git diff HEAD~1 HEAD -- pom.xml
+[2026-03-29T21:34:54.999688Z] Running command: git diff HEAD~1 HEAD -- .github/workflows/local-deploy.yml
+[2026-03-29T21:34:55.011278Z] Command succeeded: git diff HEAD~1 HEAD -- .github/workflows/local-deploy.yml
+[2026-03-29T21:34:55.011611Z] Context collection complete
+[2026-03-29T21:34:55.012358Z] Wrote context.json
+[2026-03-29T21:34:55.115104Z] Calling OpenAI model
+[2026-03-29T21:35:04.756417Z] Model response received in 9641 ms
+[2026-03-29T21:35:04.756908Z] Wrote report.md
+[2026-03-29T21:35:04.757610Z] Wrote result.json

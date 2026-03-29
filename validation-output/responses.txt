@@ -1,0 +1,18 @@
+----- GET /accounts/99999 -----
+null
+
+----- POST /accounts -----
+{"id":1,"name":"Ramesh","active":true}
+
+----- GET /accounts/1 -----
+{"id":1,"name":"Ramesh","active":true}
+
+----- PUT /accounts/1 -----
+{"id":1,"name":"UpdatedName","active":true}
+
+----- DELETE /accounts/1 -----
+
+
+----- GET /accounts/1 after delete -----
+{"id":1,"name":"UpdatedName","active":true}
+
