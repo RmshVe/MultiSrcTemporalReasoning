@@ -1,0 +1,14 @@
+# Build artifacts
+target/
+
+# Analysis outputs
+analysis-output/
+
+# Validation outputs
+validation-output/
+
+# Logs
+*.log
+
+# OS / misc
+.DS_Store

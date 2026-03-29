@@ -1,7 +1,0 @@
-server:
-  port: 8080
-
-features:
-  soft-delete: false
-  strict-role-check: false
-  validation-v2: false
