@@ -30,6 +30,8 @@ public class AccountService {
     }
 
     public void delete(Long id) {
-        repo.delete(id);
+        // Intentional S3 regression:
+        // recent refactor accidentally removed the actual delete call.
+        repo.findById(id).orElseThrow();
     }
 }
