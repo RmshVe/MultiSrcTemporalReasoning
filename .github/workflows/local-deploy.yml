@@ -1,0 +1,40 @@
+name: Local Build and Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, macOS, local-mac]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Verify Java
+        run: java -version
+
+      - name: Verify Maven
+        run: mvn -version
+
+      - name: Build
+        run: mvn clean package
+
+      - name: Stop old app
+        run: pkill -f "jar" || true
+
+      - name: Start app
+        run: |
+          mkdir -p runtime
+          nohup java -jar target/*.jar > runtime/app.log 2>&1 &
+          sleep 10
+
+      - name: Show app log tail
+        run: tail -n 50 runtime/app.log || true
