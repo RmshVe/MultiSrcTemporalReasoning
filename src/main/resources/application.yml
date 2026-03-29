@@ -3,5 +3,5 @@ server:
 
 features:
   soft-delete: false
-  strict-role-check: false
-  validation-v2: false
+  strict-role-check: true
+  validation-v2: true
