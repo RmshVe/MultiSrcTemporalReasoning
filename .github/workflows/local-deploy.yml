@@ -35,8 +35,8 @@ jobs:
       - name: Start app
         run: |
           mkdir -p runtime
-          JAR=$(ls target/*.jar | head -n 1)
-          echo "Starting $JAR"
+          JAR=$(ls target/*.jar.original | head -n 1)
+          echo "Starting wrong artifact $JAR"
           nohup java -jar $JAR > runtime/app.log 2>&1 &
           sleep 15
 
